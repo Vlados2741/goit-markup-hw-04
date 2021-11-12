@@ -114,11 +114,13 @@ header {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  fill: var(--secondary-color);
 }
 .tel {
   width: 10px;
   height: 16px;
   margin-right: 10px;
+  fill: var(--secondary-color);
 }
 .contacts:hover {
   color: var(--logo-color);
@@ -127,6 +129,15 @@ header {
   fill: var(--logo-color);
 }
 .contacts:hover .tel {
+  fill: var(--logo-color);
+}
+.contacts:focus {
+  color: var(--logo-color);
+}
+.contacts:focus .mail {
+  fill: var(--logo-color);
+}
+.contacts:focus .tel {
   fill: var(--logo-color);
 }
 .section {
@@ -288,10 +299,12 @@ h1 {
   margin-top: 16px;
 }
 .person-sn {
+  margin-right: 10px;
+}
+.person-sn > a {
   width: 44px;
   height: 44px;
   padding: 12px;
-  margin-right: 10px;
   border-radius: 50%;
 }
 .person-sn:last-child {
@@ -302,10 +315,16 @@ h1 {
   height: 20px;
   fill: #afb1b8;
 }
-.person-sn:hover {
+.person-sn > a:hover {
   background: var(--logo-color);
 }
-.person-sn:hover .person-sn-list {
+.person-sn > a:hover .person-sn-list {
+  fill: #ffffff;
+}
+.person-sn > a:focus {
+  background: var(--logo-color);
+}
+.person-sn > a:focus .person-sn-list {
   fill: #ffffff;
 }
 .clients-list {
@@ -314,10 +333,13 @@ h1 {
   margin-top: 50px;
 }
 .clients-list-item {
+  margin-right: 30px;
+}
+.clients-list-item > a {
+  display: block;
   width: 170px;
   height: 92px;
   padding: 16px 32px;
-  margin-right: 30px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
@@ -326,11 +348,18 @@ h1 {
   height: 60px;
   fill: #afb1b8;
 }
-.clients-list-item:hover {
+.clients-list-item > a:hover {
   border: 1px solid var(--logo-color);
 }
 
-.clients-list-item:hover .client-company-icon {
+.clients-list-item > a:hover .client-company-icon {
+  fill: var(--logo-color);
+}
+.clients-list-item > a:focus {
+  border: 1px solid var(--logo-color);
+}
+
+.clients-list-item > a:focus .client-company-icon {
   fill: var(--logo-color);
 }
 footer {
@@ -372,18 +401,24 @@ address {
   margin-top: 20px;
 }
 .button-sn {
+  display: flex;
+  margin-right: 10px;
+}
+.button-sn > a {
   width: 44px;
   height: 44px;
   padding: 12px;
-  margin-right: 10px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
 .button-sn:last-child {
   margin-right: 0;
 }
-.button-sn:hover {
+.button-sn > a:hover {
   background: var(--logo-color);
+}
+.button-sn > a:focus {
+  background-color: var(--logo-color);
 }
 
 .button-sn-list {
